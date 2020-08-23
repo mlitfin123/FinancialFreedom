@@ -29,4 +29,3 @@ axios({
       console.log(error)
 })
 
-// checking to see if update is working
