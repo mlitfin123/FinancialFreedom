@@ -1,15 +1,14 @@
 const axios = require("axios");
 //To pull api key from .env
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 const result = dotenv.config();
 // const { endpoint, masterKey, port } = require("config");
-console.log(process.env)
 
 axios({
     "method":"GET",
     "url":process.env.API_URL,
     "headers":{
-      "content-type":"application/octet-stream",
+      "content-type":"application/json",
       "x-rapidapi-host":"apidojo-yahoo-finance-v1.p.rapidapi.com",
       "x-rapidapi-key":process.env.API_KEY,
       "useQueryString":true
@@ -25,9 +24,8 @@ axios({
     }
 })
     .then((response)=>{
-      console.log(response.data)
+      console.log(response)
 })
     .catch((error)=>{
-      // console.log(error)
+      console.log(error)
 })
-

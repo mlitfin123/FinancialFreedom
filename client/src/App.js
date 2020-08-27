@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router,Route} from "react-router-dom";
 import Chart from "./component/chart";
-import Home from "./pages/Home";
 import "./App.css";
-
 
 class App extends Component {
   render() {
@@ -11,6 +9,8 @@ class App extends Component {
       <Router>
       <div className="App">
       <Route exact path="/" component={Home}/>
+        {/* <p>HOME PAGE</p>
+      </Route> */}
       <Route exact path="/charts" component={Chart} />
       </div>
       </Router>
