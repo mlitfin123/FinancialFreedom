@@ -3,6 +3,8 @@ import {BrowserRouter as Router,Route} from "react-router-dom";
 import Chart from "./component/chart";
 import Home from "./pages/Home";
 import LogIn from "./pages/LogIn";
+import BudGet from "./pages/BudGet";
+
 import "./App.css";
 
 
@@ -11,10 +13,12 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-      <Route exact path="/" component={Home}/>
-      <Route exact path="/" component={LogIn}/>
-      <Route exact path="/charts" component={Chart} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/LogIn" component={LogIn} />
+      <Route exact path="/BudGet" component={BudGet} />
+      <Route exact path="/chart" component={Chart} />
       </div>
+      
       </Router>
     );
   }

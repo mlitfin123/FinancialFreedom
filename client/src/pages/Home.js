@@ -1,21 +1,35 @@
-import React from "react"
+import React,{useState} from "react"
+import { useFirebaseAuth } from "use-firebase-auth"
+import { Redirect } from "react-router-dom";
 
-function Home() {
+
+import "./Home.css"
+
+function Home() { 
+  console.log(useFirebaseAuth())
+  // const [redirect,setRedirectstate] = useState (null);
+  const { user, loading, error, signInWithProvider } = useFirebaseAuth()
+  const handlerLogIn=() => {
+    signInWithProvider("google")
+  }
+  if (user) {
+    return <Redirect to="/BudGet" />
+  }
   return(
 
-    <div class="container landingPageContainer">
-      <div class="introImage center"></div>
+    <div className="container landingPageContainer">
+      <div className="introImage center"></div>
       {/* company name */}
-      <h1 class="introText uperLeft">Capital-Revenue!</h1>
-      <div class="container center">
+      <h1 className="introText uperLeft">Capital-Revenue!</h1>
+      <div className="container center">
         {/* project name */}
-        <h2 class="introText center">Financial Freedom!</h2>
+        <h2 className="introText center">Financial Freedom!</h2>
 
-        <p class="introText center">Would you like to logIn</p>
+        <p className="introText center">Would you like to logIn</p>
       </div>
     
-        <button class="btn waves-effect waves-light" type="submit" id="logIn-submit" name="action">Submit
-                    <i class="material-icons right">logIn</i>
+        <button className="btn waves-effect waves-light" onClick={handlerLogIn} type="submit" id="logIn-submit" name="action">Submit
+                    <i className="material-icons right">logIn</i>
         </button>
 
 
