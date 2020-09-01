@@ -7,11 +7,11 @@ const budgetSchema = new Schema(
     name: {
         type: String,
         trim: true,
-        required: "Enter the name of the expense or deposit"
+        required: true
     },
     value: {
         type: Number,
-        required: "Enter the total"
+        required: true
     },
     date: {
         type: Date,

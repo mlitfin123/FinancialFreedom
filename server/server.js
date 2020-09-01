@@ -1,13 +1,14 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
+const cors = require('cors');
 const compression = require("compression");
 const routes = require("./routes/routes.js");
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require("./db/index");
-const PORT = process.env.PORT || 3001;
-const app = express();
+const { countReset } = require("console");
+const PORT = process.env.PORT || 3002;
 
 const app = express();
 // Serve up static assets (usually on heroku)
@@ -17,6 +18,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(morgan("dev"));
 
+app.use(cors());
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -30,7 +32,7 @@ app.use(
 );
 
 
-app.use(routes);
+app.use('/budget', routes);
 
 // Send every request to the React app
 // Define any API routes before this runs
