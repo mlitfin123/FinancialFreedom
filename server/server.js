@@ -8,7 +8,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require("./db/index");
 const { countReset } = require("console");
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 // Serve up static assets (usually on heroku)
