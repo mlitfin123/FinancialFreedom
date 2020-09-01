@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require('dotenv').config();
 mongoose.Promise = global.Promise;
 
-const MONGODB_URI = "";
+const MONGODB_URI = MONGODB_URI;
 const MONGO_LOCAL_URL = "mongodb://localhost/budget";
 
 if (process.env.MONGODB_URI) {
@@ -21,15 +22,15 @@ if (process.env.MONGODB_URI) {
     });
 }
 
-const db = mongoose.connection;
-db.on("error", (err) => {
+const connection = mongoose.connection;
+connection.on("error", (err) => {
     console.log(`There was an error connecting to the database: ${err}`);
 });
 
-db.once("open", () => {
+connection.once("open", () => {
     console.log(
     `You have successfully connected to your database`
     );
 });
 
-module.exports = db;
+module.exports = connection;

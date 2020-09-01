@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router,Route} from "react-router-dom";
+import Home from "./pages/Home"
 import Chart from "./component/chart";
 import "./App.css";
 
