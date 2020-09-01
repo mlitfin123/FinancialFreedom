@@ -4,9 +4,9 @@ const path = require("path");
 const compression = require("compression");
 const routes = require("./routes/routes.js");
 const cors = require('cors');
-require('dotenv').config();
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
+require('dotenv').config();
 
 const app = express();
 
@@ -35,6 +35,12 @@ if (process.env.MONGODB_URI) {
     });
     console.log("MongoDB database connection established successfully");
 }
+
+app.use('/api/BudGet', routes);
+
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

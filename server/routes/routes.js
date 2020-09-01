@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.post("/add", (req, res) => {
+router.post("/api/BudGet", (req, res) => {
     const transaction = req.body.text;
     const value = req.body.value;
     const date = Date.parse(req.body.date);

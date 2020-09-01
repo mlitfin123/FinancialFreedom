@@ -1,5 +1,6 @@
 import React, { createContext, useReducer} from "react";
 import AppReducer from "./AppReducer";
+import axios from 'axios';
 
 //Initial state
 const initialState ={
@@ -18,13 +19,16 @@ export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     //Action
-    function deleteTransaction(id) {
+    async function deleteTransaction(id) {
+        await axios.delete(`/api/BudGet/${id}`);
         dispatch({
             type: "DELETE_TRANSACTION",
             payload: id
         });
     }
-    function addTransaction(transaction) {
+
+    async function addTransaction(transaction) {
+        await axios.post('/api/BudGet', transaction);
         dispatch({
             type: "ADD_TRANSACTION",
             payload: transaction
@@ -37,6 +41,6 @@ export const GlobalProvider = ({ children }) => {
         addTransaction
     }}> 
         { children } 
-        </GlobalContext.Provider>);
+    </GlobalContext.Provider>);
 
 }
