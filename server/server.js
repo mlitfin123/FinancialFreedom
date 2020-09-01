@@ -1,44 +1,40 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
-const cors = require('cors');
 const compression = require("compression");
 const routes = require("./routes/routes.js");
-const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
-const dbConnection = require("./db/index");
-const { countReset } = require("console");
-const PORT = process.env.PORT || 3001;
+const cors = require('cors');
+require('dotenv').config();
+const mongoose = require('mongoose');
+const PORT = process.env.PORT || 3002;
 
 const app = express();
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 app.use(morgan("dev"));
 
-app.use(cors());
 app.use(compression());
-app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 app.use(express.json());
-app.use(
-  session({
-    secret: process.env.APP_SECRET || "this is the default passphrase",
-    store: new MongoStore({ mongooseConnection: dbConnection }),
-    resave: false,
-    saveUninitialized: false,
-  })
-);
 
+// const MONGODB_URI = MONGODB_URI;
+const MONGO_LOCAL_URL = "mongodb://localhost/budget";
 
-app.use('/budget', routes);
-
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
 });
+    
+} else {
+    // local mongo url
+    mongoose.connect(MONGO_LOCAL_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+    });
+    console.log("MongoDB database connection established successfully");
+}
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
