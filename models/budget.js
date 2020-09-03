@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 
 const budgetSchema = new Schema(
     {
+    _id: {
+        type: Number
+    },
     name: {
         type: String,
         trim: true,

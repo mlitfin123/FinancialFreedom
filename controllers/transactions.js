@@ -1,4 +1,5 @@
 const Transaction = require('../models/budget');
+const { Console } = require('console');
 
 exports.getTransactions = async (req, res, next) => {
     try {
@@ -37,6 +38,7 @@ exports.addTransaction = async (req, res, next) => {
         error: messages
     });
     } else {
+        console.log(err)
         return res.status(500).json({
         success: false,
         error: 'Server Error'
@@ -63,6 +65,7 @@ exports.deleteTransaction = async (req, res, next) => {
         data: {}
     });
 } catch (err) {
+    console.log(err)
     return res.status(500).json({
         success: false,
         error: 'Server Error'

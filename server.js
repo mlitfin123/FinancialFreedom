@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // const MONGODB_URI = MONGODB_URI;
-const MONGO_LOCAL_URL = "mongodb://localhost/BudGet";
+const MONGO_LOCAL_URL = "mongodb://localhost/budget";
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
