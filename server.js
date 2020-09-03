@@ -2,10 +2,10 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const compression = require("compression");
-const routes = require("./routes/routes.js");
+const routes = require("./routes/transactions.js");
 const cors = require('cors');
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 require('dotenv').config();
 
 const app = express();
@@ -17,7 +17,11 @@ app.use(cors());
 app.use(express.json());
 
 // const MONGODB_URI = MONGODB_URI;
-const MONGO_LOCAL_URL = "mongodb://localhost/budget";
+const MONGO_LOCAL_URL = "mongodb://localhost/BudGet";
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 if (process.env.MONGODB_URI) {
     mongoose.connect(process.env.MONGODB_URI, {
