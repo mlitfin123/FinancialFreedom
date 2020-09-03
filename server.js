@@ -5,7 +5,7 @@ const compression = require("compression");
 const routes = require("./routes/transactions.js");
 const cors = require('cors');
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 require('dotenv').config();
 
 const app = express();
@@ -40,7 +40,7 @@ if (process.env.MONGODB_URI) {
     console.log("MongoDB database connection established successfully");
 }
 
-app.use('/api/BudGet', routes);
+app.use('/api/budget', routes);
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

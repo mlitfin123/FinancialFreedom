@@ -2,8 +2,9 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3002/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "^0.20.0",
     "chart.js": "^2.9.3",
     "node": "^14.8.0",
     "react": "^16.6.3",

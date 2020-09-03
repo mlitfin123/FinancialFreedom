@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalState";
 
 function IncomeExpenses() {
     const { transactions } = useContext(GlobalContext);
-    const amounts = transactions.map(transaction => transaction.amount);
+    const amounts = transactions.map(transaction => transaction.value);
 
     const income = amounts
         .filter(item => item > 0)
