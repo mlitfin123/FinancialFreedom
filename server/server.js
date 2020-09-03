@@ -1,4 +1,6 @@
 const express = require("express");
+const dotenv = require ("dotenv");
+const colors = require ("colors");
 const morgan = require("morgan");
 const path = require("path");
 const compression = require("compression");
@@ -7,7 +9,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require("./db/index");
 const PORT = process.env.PORT || 3001;
-const app = express();
+
 
 const app = express();
 // Serve up static assets (usually on heroku)
