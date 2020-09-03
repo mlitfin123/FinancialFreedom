@@ -26,10 +26,6 @@ function IncomeExpenses() {
             </div>
         </div>
     )
-  }
+}
 
-
-
-
-
-  export default IncomeExpenses
+export default IncomeExpenses

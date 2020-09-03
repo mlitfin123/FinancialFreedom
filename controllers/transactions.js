@@ -20,7 +20,7 @@ exports.getTransactions = async (req, res, next) => {
 
 exports.addTransaction = async (req, res, next) => {
     try {
-    const { text, amount } = req.body;
+    const { name, value } = req.body;
 
     const transaction = await Transaction.create(req.body);
 
