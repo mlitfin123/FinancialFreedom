@@ -4,14 +4,17 @@ const Schema = mongoose.Schema;
 
 const budgetSchema = new Schema(
     {
+    _id: {
+        type: Number
+    },
     name: {
         type: String,
         trim: true,
-        required: "Enter the name of the expense or deposit"
+        required: [true, "Enter a name"]
     },
     value: {
         type: Number,
-        required: "Enter the total"
+        required: [true, "Enter a value"]
     },
     date: {
         type: Date,
