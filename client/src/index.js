@@ -6,7 +6,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import { FirebaseAuthProvider } from "use-firebase-auth"
 import firebase from "firebase/app"
 import "firebase/auth"
- 
+
 const firebaseConfig = {
   //Load your Firebase Project configuration here
   apiKey: "AIzaSyA4DH-PBlLPQ8oKPeAcezP_BZZ7CMlnHXs",
