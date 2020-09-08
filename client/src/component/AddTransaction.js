@@ -17,18 +17,18 @@ const AddTransaction = () => {
 
     return (
         <>
-        <h3>Add New Transaction</h3>
+        <h4>Add New Transaction</h4>
         <form onSubmit={onSubmit}>
             <div className="form-control">
-                <label htmlFor="text">Transaction Name </label>
-                <input type="text" value={name} onChange={(e) => setText(e.target.value)} placeholder="Enter text... " />
+                <label className="white-text text-lighten-3" htmlFor="text"><h5>Transaction Name </h5></label>
+                <input className="white-text text-lighten-3" type="text" value={name} onChange={(e) => setText(e.target.value)} placeholder="Enter text... " />
             </div>
             <div className="form-control">
-                <label htmlFor="amount">Amount< br />
+                <label className="white-text text-lighten-3" htmlFor="amount"><h5>Amount</h5>< br />
                 (negative - expense, positive - income)</label>
-                <input type="number" value={value} onChange={(e) => setAmount(e.target.value)}placeholder="Enter amount..." />
+                <input className="white-text text-lighten-3" type="number" value={value} onChange={(e) => setAmount(e.target.value)}placeholder="Enter amount..." />
             </div>
-            <button className="btn">Add Transaction</button>
+            <button className="white-text text-lighten-3" className="btn">Add Transaction</button>
         </form>
         </>
     )
