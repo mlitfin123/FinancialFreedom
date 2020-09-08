@@ -16,20 +16,31 @@ function Home() {
     return <Redirect to="/BudGet" />
   }
   return(
-
+    
     <div className="container landingPageContainer">
       <div className="introImage center"></div>
       {/* company name */}
-      <h1 className="introText uperLeft">Capital-Revenue!</h1>
-      <div className="container center">
+      <h1 className="introText uperLeft">Capital-Revenue</h1>
+       <div className="container center">
+       <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
         {/* project name */}
-        <h2 className="introText center">Financial Freedom!</h2>
+        <h2 className="introText center">Financial Freedom</h2>
 
         <p className="introText center">Would you like to logIn</p>
       </div>
     
-        <button className="btn waves-effect waves-light" onClick={handlerLogIn} type="submit" id="logIn-submit" name="action">Submit
-                    <i className="material-icons right">logIn</i>
+        <button className="btn waves-effect waves-light" onClick={handlerLogIn} type="submit" id="logIn-submit" name="action">logIn
+                    {/* <i className="material-icons right">LogIn</i> */}
         </button>
 
 
