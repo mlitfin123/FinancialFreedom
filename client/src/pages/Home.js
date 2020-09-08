@@ -15,6 +15,7 @@ function Home() {
   if (user) {
     return <Redirect to="/BudGet" />
   }
+  
   return(
     
     <div className="container landingPageContainer">
@@ -42,7 +43,6 @@ function Home() {
         <button className="btn waves-effect waves-light" onClick={handlerLogIn} type="submit" id="logIn-submit" name="action">logIn
                     {/* <i className="material-icons right">LogIn</i> */}
         </button>
-
 
     </div>)
 }
