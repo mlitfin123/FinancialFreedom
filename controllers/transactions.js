@@ -4,7 +4,7 @@ const { Console } = require('console');
 exports.getTransactions = async (req, res, next) => {
     try {
     const transactions = await Transaction.find();
-
+console.log(transactions);
     return res.status(200).json({
         success: true,
         count: transactions.length,

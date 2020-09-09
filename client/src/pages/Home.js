@@ -31,9 +31,7 @@ function Home() {
          <br></br>
          <br></br>
          <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
+         <br></br> 
         {/* project name */}
         <h2 className="introText center">Financial Freedom</h2>
 

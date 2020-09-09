@@ -7,8 +7,8 @@ import BudGet from "./pages/BudGet";
 
 import "./App.css";
 
-class App extends Component {
-  render() {
+function App() { 
+  const { user, loading, error} = useFirebaseAuth()
     return (
       <Router>
       <div className="App">
@@ -16,11 +16,10 @@ class App extends Component {
       <Route exact path="/LogIn" component={LogIn} />
       <Route exact path="/BudGet" component={BudGet} />
       <Route exact path="/chart" component={Chart} />
-      </div>
-      
+      </div> 
       </Router>
     );
   }
-}
+
 
 export default App;

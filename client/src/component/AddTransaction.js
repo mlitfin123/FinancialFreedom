@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react"
 import { GlobalContext } from "../context/GlobalState";
 
+
 const AddTransaction = () => {
     const [name, setText] = useState ("");
     const [value, setAmount] = useState (0);
@@ -26,7 +27,7 @@ const AddTransaction = () => {
             <div className="form-control">
                 <label className="white-text text-lighten-3" htmlFor="amount"><h5>Amount</h5>< br />
                 (negative - expense, positive - income)</label>
-                <input className="white-text text-lighten-3" type="number" value={value} onChange={(e) => setAmount(e.target.value)}placeholder="Enter amount..." />
+                <input className="white-text text-lighten-3" type="number" value={value} onChange={(e) => setAmount(e.target.value)}placeholder="Enter amount..."/>
             </div>
             <button className="white-text text-lighten-3" className="btn">Add Transaction</button>
         </form>
