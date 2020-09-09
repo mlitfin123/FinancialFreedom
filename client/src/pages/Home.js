@@ -22,18 +22,18 @@ function Home() {
       <div className="introImage center"></div>
       {/* company name */}
       <h1 className="introText uperLeft">Capital-Revenue</h1>
-       <div className="container center">
-       <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
+        <div className="container center">
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         {/* project name */}
         <h2 className="introText center">Financial Freedom</h2>
 
