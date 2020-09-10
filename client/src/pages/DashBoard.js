@@ -20,9 +20,6 @@ function DashBoard() {
                     <i className="material-icons right">logIn</i>
         </button>
 
-        <InvestmentList />
-
-
     </div>)
 }
 export default DashBoard
