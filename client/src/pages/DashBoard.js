@@ -1,5 +1,6 @@
 import React from "react"
 import "./DashBoard.css"
+import InvestmentList  from "../component/InvestmentList";
 
 function DashBoard() {
   return(
@@ -19,7 +20,9 @@ function DashBoard() {
                     <i className="material-icons right">logIn</i>
         </button>
 
+        <InvestmentList />
+
 
     </div>)
 }
-export default Home
+export default DashBoard

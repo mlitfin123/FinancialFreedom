@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Chart from "./component/chart";
 import LogIn from "./pages/LogIn";
 import BudGet from "./pages/BudGet";
+import Dashboard from "./pages/DashBoard";
 
 import "./App.css";
 
@@ -15,6 +16,7 @@ class App extends Component {
       <Route exact path="/" component={Home} />
       <Route exact path="/LogIn" component={LogIn} />
       <Route exact path="/BudGet" component={BudGet} />
+      <Route exact path="/Dashboard" component={Dashboard} />
       <Route exact path="/chart" component={Chart} />
       </div>
       
