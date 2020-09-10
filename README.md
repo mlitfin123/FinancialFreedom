@@ -1,6 +1,6 @@
 # Financial-Freedom
 basic API app useing FireBaseAuth-Hooks
-##Dependecnies
+##Dependencies
 - Chart.js
 - Dotenv
 - useFireBaseAuth
