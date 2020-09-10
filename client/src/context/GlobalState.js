@@ -18,6 +18,7 @@ export const GlobalProvider = ({ children }) => {
     async function getTransactions() {
         try {
             const res = await axios.get('/api/budget');
+            console.log (res.data.data);
             dispatch({
                 type: 'GET_TRANSACTIONS',
                 payload: res.data.data
