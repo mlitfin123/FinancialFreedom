@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
 import firebase from '../../node_modules/firebase'
+import { Link } from 'react-router-dom';
 
 function Logout () {
 
@@ -10,7 +11,7 @@ function Logout () {
 
     return (
         <div>
-            <button className="btn" onClick={ handleLogout }>Log Out</button>
+            <Link to="/"><button className="btn" onClick={ handleLogout }>Log Out</button></Link>
         </div>
     )
 }

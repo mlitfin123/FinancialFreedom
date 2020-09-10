@@ -1,6 +1,7 @@
 import React from "react"
 import "./DashBoard.css"
-import InvestmentList  from "../component/InvestmentList";
+import { Link } from 'react-router-dom';
+import Logout from "../component/Logout";
 
 function DashBoard() {
   return(
@@ -15,11 +16,16 @@ function DashBoard() {
 
         <p className="introText center">What would you like to do</p>
       </div>
-    
-        <button className="btn waves-effect waves-light" type="submit" id="logIn-submit" name="action">Submit
-                    <i className="material-icons right">logIn</i>
-        </button>
-
-    </div>)
+      <div>
+      <Link to="/BudGet"><button className="btn waves-effect waves-light" id="logIn-submit" name="action">Adjust your Budget
+          </button></Link>
+        </div>
+        <div>
+        <Link to="/Investments"><button className="btn waves-effect waves-light" id="logIn-submit" name="action">View Potential Investments
+          </button></Link>
+        </div>
+        <Logout />
+    </div>
+    )
 }
 export default DashBoard
