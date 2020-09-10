@@ -20,6 +20,7 @@ const budgetSchema = new Schema(
         type: Date,
         default: Date.now
     }
+    
 }
 );
 
