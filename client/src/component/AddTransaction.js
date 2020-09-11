@@ -1,11 +1,12 @@
 import React, {useState, useContext} from "react"
 import { GlobalContext } from "../context/GlobalState";
-
+import { useFirebaseAuth } from "use-firebase-auth"
 
 const AddTransaction = () => {
     const [name, setText] = useState ("");
     const [value, setAmount] = useState (0);
     const {addTransaction } = useContext(GlobalContext);
+    const { user } = useFirebaseAuth()
     const onSubmit = e => {
         e.preventDefault();
     const newTransaction ={

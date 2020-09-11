@@ -15,7 +15,7 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
-    async function getTransactions() {
+    async function getTransactions(id) {
         try {
             const res = await axios.get('/api/budget');
             console.log (res.data.data);

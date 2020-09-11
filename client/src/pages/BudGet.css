@@ -155,7 +155,10 @@ input[type='number'] {
 .list li:hover .delete-btn {
   opacity: 1;
 }
-
+.transaction-amount {
+  position: absolute;
+    right: 15%;
+}
 @media (max-width: 320px) {
   .container {
     width: 300px;
