@@ -9,7 +9,7 @@ const TransactionList = ()=> {
     console.log (user)
     useEffect(() => {
         getTransactions();
-    }, []);
+    }, []);console.log(document.querySelector("#total"))
 
     return (
         <>

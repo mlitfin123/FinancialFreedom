@@ -9,7 +9,7 @@ function Balance() {
     return(
         <div>
             <h4>Your Balance</h4>
-            <h5>${total}</h5> 
+            <h5 id='total'>${total}</h5> 
         </div>
     )
 }
