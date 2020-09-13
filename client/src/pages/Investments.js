@@ -1,5 +1,4 @@
 import React from "react"
-import "./DashBoard.css"
 import InvestmentList  from "../component/InvestmentList";
 import Logout from "../component/Logout";
 import Dash from "../component/Backtodash"

@@ -26,6 +26,7 @@ const InvestmentList = ()=> {
             console.log(error)
         })
     }
+    
     const url = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[0]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
     const url1 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[1]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
     const url2 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[2]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
@@ -34,31 +35,18 @@ const InvestmentList = ()=> {
     const url5 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[5]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
 
     return (
-        <div
-            style={{
-                background: '#EEE',
-                padding: '5%',
-                fontFamily: '"Lucida Console", Monaco, monospace'
-            }}>
-            <h2>Search Trending Stocks</h2>
-            <form onSubmit={fetchData}>
-                <fieldset>
-                    <legend>Search Stock Market</legend>
-                    <label htmlFor="ticker">Press the Submit Button to retrieve stocks
+        <div>
+            <h2>View Trending Stocks</h2>
 
-                    </label>
-                    <button type='submit'>Submit</button>
-                </fieldset>
-            </form>
             <p>{message}</p>
-            <h4 style={{position: "relative"}}>Symbol: {responseData}</h4>
-            <h4 style={{position: "relative"}}>Price: {responsePrice}</h4>
-            <h4 style={{position: "relative"}}>Charts:</h4><a target="_blank" href={url} data-symbol={responseData} data-reactid="73"><iframe src={url} title="Stock Charts"></iframe></a>
-            <a target="_blank" href={url1} data-symbol={responseData} data-reactid="73"><iframe src={url1} title="Stock Charts"></iframe></a>
-            <a target="_blank" href={url2} data-symbol={responseData} data-reactid="73"><iframe src={url2} title="Stock Charts"></iframe></a>
-            <a target="_blank" href={url3} data-symbol={responseData} data-reactid="73"><iframe src={url3} title="Stock Charts"></iframe></a>
-            <a target="_blank" href={url4} data-symbol={responseData} data-reactid="73"><iframe src={url4} title="Stock Charts"></iframe></a>
-            <a target="_blank" href={url5} data-symbol={responseData} data-reactid="73"><iframe src={url5} title="Stock Charts"></iframe></a>
+            <h4 className="stocks">Symbol: {responseData}</h4>
+            <h4 className="stocks">Price: {responsePrice}</h4>
+            <h4 className="stocks">Charts:</h4><a target="_blank" href={url} data-symbol={responseData} data-reactid="73"><iframe src={url} title="Stock Charts"></iframe>View Chart</a>
+            <a target="_blank" href={url1} data-symbol={responseData} data-reactid="73"><iframe src={url1} title="Stock Charts"></iframe>View Chart</a>
+            <a target="_blank" href={url2} data-symbol={responseData} data-reactid="73"><iframe src={url2} title="Stock Charts"></iframe>View Chart</a>
+            <a target="_blank" href={url3} data-symbol={responseData} data-reactid="73"><iframe src={url3} title="Stock Charts"></iframe>View Chart</a>
+            <a target="_blank" href={url4} data-symbol={responseData} data-reactid="73"><iframe src={url4} title="Stock Charts"></iframe>View Chart</a>
+            <a onLoad={fetchData} target="_blank" href={url5} data-symbol={responseData} data-reactid="73"><iframe src={url5} title="Stock Charts">View Chart</iframe></a>
             
         </div>
     )
