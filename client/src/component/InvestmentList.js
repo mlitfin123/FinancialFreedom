@@ -28,11 +28,11 @@ const InvestmentList = ()=> {
     }
     
     const url = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[0]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
-    const url1 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[1]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
-    const url2 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[2]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
-    const url3 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[3]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
-    const url4 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[4]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
-    const url5 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[5]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
+    const url1 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[2]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
+    const url2 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[4]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
+    const url3 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[6]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
+    const url4 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[8]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
+    const url5 = `https://widgets.tc2000.com/ChartWidget.aspx?widgetid=202194&service=TCTEMPLATEWIDGET&sym=${responseData[10]}&tf=1DAY&zoomL=3&ID=1487782&w=400&h=300&showZ=True&showTF=True&showSym=False&bars=40`
 
     return (
         <div>
