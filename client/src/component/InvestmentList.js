@@ -14,8 +14,8 @@ const InvestmentList = ()=> {
         api.getData()
         .then((response)=>{
             console.log(response)
-            const queryResponse = [response.data.finance.result[0].quotes[0].symbol,` `, response.data.finance.result[0].quotes[1].symbol, ` `, response.data.finance.result[0].quotes[2].symbol, ` `, response.data.finance.result[0].quotes[3].symbol, ` `, response.data.finance.result[0].quotes[4].symbol, ` `, response.data.finance.result[0].quotes[5].symbol];
-            const responsePrice = [[`$`, response.data.finance.result[0].quotes[0].regularMarketPrice,` $`,  response.data.finance.result[0].quotes[1].regularMarketPrice, ` $`,  response.data.finance.result[0].quotes[2].regularMarketPrice, ` $`, response.data.finance.result[0].quotes[3].regularMarketPrice, ` $`, response.data.finance.result[0].quotes[4].regularMarketPrice, ` $`, response.data.finance.result[0].quotes[5].regularMarketPrice]]
+            const queryResponse = [response.data.finance.result[0].quotes[0].symbol,` | `, response.data.finance.result[0].quotes[1].symbol, ` | `, response.data.finance.result[0].quotes[2].symbol, ` | `, response.data.finance.result[0].quotes[3].symbol, ` | `, response.data.finance.result[0].quotes[4].symbol, ` | `, response.data.finance.result[0].quotes[5].symbol];
+            const responsePrice = [[`$`, response.data.finance.result[0].quotes[0].regularMarketPrice,` | $`,  response.data.finance.result[0].quotes[1].regularMarketPrice, ` | $`,  response.data.finance.result[0].quotes[2].regularMarketPrice, ` | $`, response.data.finance.result[0].quotes[3].regularMarketPrice, ` | $`, response.data.finance.result[0].quotes[4].regularMarketPrice, ` | $`, response.data.finance.result[0].quotes[5].regularMarketPrice]]
             console.log(queryResponse)
             console.log(responsePrice)
             setResponseData(queryResponse)
@@ -41,12 +41,12 @@ const InvestmentList = ()=> {
             <p>{message}</p>
             <h4 className="stocks">Symbol: {responseData}</h4>
             <h4 className="stocks">Price: {responsePrice}</h4>
-            <h4 className="stocks">Charts:</h4><a target="_blank" href={url} data-symbol={responseData} data-reactid="73"><iframe src={url} title="Stock Charts"></iframe>View Chart</a>
-            <a target="_blank" href={url1} data-symbol={responseData} data-reactid="73"><iframe src={url1} title="Stock Charts"></iframe>View Chart</a>
-            <a target="_blank" href={url2} data-symbol={responseData} data-reactid="73"><iframe src={url2} title="Stock Charts"></iframe>View Chart</a>
-            <a target="_blank" href={url3} data-symbol={responseData} data-reactid="73"><iframe src={url3} title="Stock Charts"></iframe>View Chart</a>
-            <a target="_blank" href={url4} data-symbol={responseData} data-reactid="73"><iframe src={url4} title="Stock Charts"></iframe>View Chart</a>
-            <a onLoad={fetchData} target="_blank" href={url5} data-symbol={responseData} data-reactid="73"><iframe src={url5} title="Stock Charts">View Chart</iframe></a>
+            <h4 className="stocks">Charts:</h4><a className="charts" target="_blank" rel="noopener noreferrer" href={url} data-symbol={responseData} data-reactid="73"><iframe src={url} title="Stock Charts"></iframe>View Chart</a>
+            <a className="charts" target="_blank" rel="noopener noreferrer" href={url1} data-symbol={responseData} data-reactid="73"><iframe src={url1} title="Stock Charts"></iframe>View Chart</a>
+            <a className="charts" target="_blank" rel="noopener noreferrer" href={url2} data-symbol={responseData} data-reactid="73"><iframe src={url2} title="Stock Charts"></iframe>View Chart</a>
+            <a className="charts" target="_blank" rel="noopener noreferrer" href={url3} data-symbol={responseData} data-reactid="73"><iframe src={url3} title="Stock Charts"></iframe>View Chart</a>
+            <a className="charts" target="_blank" rel="noopener noreferrer" href={url4} data-symbol={responseData} data-reactid="73"><iframe src={url4} title="Stock Charts"></iframe>View Chart</a>
+            <a onLoad={fetchData} className="charts" target="_blank" rel="noopener noreferrer" href={url5} data-symbol={responseData} data-reactid="73"><iframe src={url5} title="Stock Charts">View Chart</iframe></a>
             
         </div>
     )
