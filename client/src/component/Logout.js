@@ -1,13 +1,10 @@
 import React from 'react';
-import { Redirect } from "react-router-dom";
 import firebase from '../../node_modules/firebase'
 import { Link } from 'react-router-dom';
 
 function Logout () {
 
-    const handleLogout = firebase.auth().signOut().then(function(){
-        return <Redirect to="/Home" />
-    })
+    const handleLogout = firebase.auth().signOut()
 
     return (
         <div>

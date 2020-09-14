@@ -19,7 +19,11 @@ const budgetSchema = new Schema(
     date: {
         type: Date,
         default: Date.now
-    }
+    },
+    // userId: {
+
+    // }
+    
 }
 );
 
