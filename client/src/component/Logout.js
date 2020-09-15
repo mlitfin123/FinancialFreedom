@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from "react-router-dom";
 import firebase from '../../node_modules/firebase'
 import { Link } from 'react-router-dom';
 
