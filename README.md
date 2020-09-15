@@ -8,7 +8,7 @@ https://financialfreedombudget.herokuapp.com/
 - Is creating a financial plan that helps you see the big picture and set long and short-term life goals.
 
 ## Dependencies
-- Chart.js
+- React-apexcharts
 - Dotenv
 - useFireBaseAuth
 
