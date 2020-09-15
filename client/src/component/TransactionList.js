@@ -4,11 +4,11 @@ import { Transaction } from "./Transaction";
 import { useFirebaseAuth } from "use-firebase-auth"
 
 const TransactionList = ()=> {
-    const { transactions, getTransactions } = useContext(GlobalContext);
+    const { transactions, getTransactionsByUser } = useContext(GlobalContext);
     const { user } = useFirebaseAuth()
     console.log (user)
     useEffect(() => {
-        getTransactions();
+    user && getTransactionsByUser(user.uid);
     }, []);
 
     return (

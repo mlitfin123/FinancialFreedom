@@ -5,7 +5,7 @@ import axios from 'axios';
 //Initial state
 const initialState ={
     transactions: [
-        {}
+        // {}
     ]
 }
 // Create context
@@ -21,6 +21,21 @@ export const GlobalProvider = ({ children }) => {
             console.log (res.data.data);
             dispatch({
                 type: 'GET_TRANSACTIONS',
+                payload: res.data.data
+            });
+        } catch (err) {
+            dispatch({
+                type: 'TRANSACTION_ERROR',
+                payload: err.response.data.error
+            });
+        }
+    }
+    async function getTransactionsByUser(id) {
+        try {
+            const res = await axios.get(`/api/budget/${id}`);
+            console.log (res.data.data);
+            dispatch({
+                type: 'GET_TRANSACTIONS_BY_USER',
                 payload: res.data.data
             });
         } catch (err) {
@@ -71,6 +86,7 @@ export const GlobalProvider = ({ children }) => {
     return (<GlobalContext.Provider value={{
         transactions: state.transactions,
         error: state.error,
+        getTransactionsByUser,
         getTransactions,
         addTransaction,
         deleteTransaction

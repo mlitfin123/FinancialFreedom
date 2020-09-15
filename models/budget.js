@@ -20,9 +20,11 @@ const budgetSchema = new Schema(
         type: Date,
         default: Date.now
     },
-    // userId: {
-
-    // }
+    userId: {
+        type: String,
+        trim: true,
+        required: [true, "Must be logIn to add transaction"]
+    },
     
 }
 );

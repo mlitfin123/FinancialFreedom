@@ -19,6 +19,7 @@ app.use(compression());
 app.use(cors());
 app.use(express.json());
 
+
 // const MONGODB_URI = MONGODB_URI;
 const MONGO_LOCAL_URL = "mongodb://localhost/dailybudget";
 
