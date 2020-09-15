@@ -26,22 +26,22 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// if (MONGODB_URI) {
+if (MONGODB_URI) {
     mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
 });
     
-// } else {
-//     // local mongo url
-//     mongoose.connect(MONGO_LOCAL_URL, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true
-//     });
-//     console.log("MongoDB database connection established successfully");
-// }
+} else {
+    // local mongo url
+    mongoose.connect(MONGO_LOCAL_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+    });
+    console.log("MongoDB database connection established successfully");
+}
 
 app.use('/api/budget', routes);
 
