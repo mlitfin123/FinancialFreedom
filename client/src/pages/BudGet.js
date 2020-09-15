@@ -7,10 +7,12 @@ import Logout from "../component/Logout";
 import {GlobalProvider} from "../context/GlobalState";
 import BudgetChart from "../component/chart"
 import Dash from "../component/Backtodash"
+import { useFirebaseAuth } from "use-firebase-auth";
 
 import "./BudGet.css"
 
 function BudGet() {
+  const { user } = useFirebaseAuth()
   return(
     <div className="container landingPageContainer">
     <div className="introImage center"></div>
@@ -20,7 +22,7 @@ function BudGet() {
           <Balance />
           <IncomeExpenses />
           <TransactionList />
-          <AddTransaction />
+          <AddTransaction user={user}/>
           <Dash />
           <Logout />
           <BudgetChart />
