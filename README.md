@@ -1,10 +1,16 @@
-# README.md
+# Financial-Freedom
+Basic API app and budget tracker using FireBaseAuth-Hooks.
 
 ## Link to the live application
 https://financialfreedombudget.herokuapp.com/
 
 ## Description
 - Is creating a financial plan that helps you see the big picture and set long and short-term life goals.
+
+##Dependencies
+- Chart.js
+- Dotenv
+- useFireBaseAuth
 
 ## Installation 
 - npm install
@@ -27,14 +33,6 @@ https://financialfreedombudget.herokuapp.com/
 
 ## License
 - MIT
-
-# Financial-Freedom
-basic API app and budget tracker using FireBaseAuth-Hooks
-
-##Dependencies
-- Chart.js
-- Dotenv
-- useFireBaseAuth
 
 ## Contributors
 - no
