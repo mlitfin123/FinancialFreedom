@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const MONGODB_URI = MONGODB_URI;
+const MONGODB_URI = process.emv.MONGODB_URI;
 const MONGO_LOCAL_URL = "mongodb://localhost/dailybudget";
 
 if (process.env.NODE_ENV === "production") {
@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 if (process.env.MONGODB_URI) {
-    mongoose.connect(process.env.MONGODB_URI, {
+    mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
