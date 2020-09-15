@@ -17,7 +17,23 @@ console.log(transactions);
     });
 }
 }
-
+exports.getTransactionsByUser = async (req, res, next) => {
+    console.log(req.params)
+    try {
+    const transactions = await Transaction.find({userId:req.params.id});
+console.log(transactions);
+    return res.status(200).json({
+        success: true,
+        count: transactions.length,
+        data: transactions
+    });
+} catch (err) {
+    return res.status(500).json({
+        success: false,
+        error: 'Server Error'
+    });
+}
+}
 exports.addTransaction = async (req, res, next) => {
     try {
     const { name, value } = req.body;
