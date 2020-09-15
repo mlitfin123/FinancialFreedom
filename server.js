@@ -19,7 +19,12 @@ app.use(compression());
 app.use(cors());
 app.use(express.json());
 
+<<<<<<< HEAD
 const MONGODB_URI = process.env.MONGODB_URI;
+=======
+
+const MONGODB_URI = MONGODB_URI;
+>>>>>>> a2da86353c37ec8faaec79017eac72e9c7c87f44
 const MONGO_LOCAL_URL = "mongodb://localhost/dailybudget";
 
 if (process.env.NODE_ENV === "production") {

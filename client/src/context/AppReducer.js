@@ -5,6 +5,11 @@ export default (state, action) => {
                 ...state,
                 transactions:action.payload
             }
+            case 'GET_TRANSACTIONS_BY_USER':
+            return {
+                ...state,
+                transactions:action.payload
+            }
         case "DELETE_TRANSACTION":
         return {
             ...state, 
