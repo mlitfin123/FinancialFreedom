@@ -7,7 +7,7 @@ function LogIn() {
         <div className="container landingPageContainer">
         <div className="introImage center"></div>
             <div className="LogInPage">
-                <h1 LogIn="introText uperLeft">Capital-Revenue!</h1>
+                <h1 className="introText uperLeft">Capital-Revenue!</h1>
                 <div className="container center">
                     {/* project name */}
                     <h2 className="introText center">Financial Freedom!</h2>
