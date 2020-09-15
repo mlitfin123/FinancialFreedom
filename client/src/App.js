@@ -10,7 +10,7 @@ import Investments from "./pages/Investments";
 import "./App.css";
 
 function App() { 
-  // const { user, loading, error } = useFirebaseAuth()
+  const { user, loading, error } = useFirebaseAuth()
     return (
       <Router>
       <div className="App">
