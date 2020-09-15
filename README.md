@@ -1,6 +1,11 @@
 # README.md
+
+## Link to the live application
+https://financialfreedombudget.herokuapp.com/
+
 ## Description
 - Is creating a financial plan that helps you see the big picture and set long and short-term life goals.
+
 ## Installation 
 - npm install
 - express
@@ -9,6 +14,7 @@
 - mongodb
 - npm start to start the server.
 - navigate to the localhost to view the application.
+
 ## Usage 
 - Log in using the google login method.
 - At the Dashboard, select Adjust your Budget to navigate to the BudGet window.
@@ -18,18 +24,24 @@
 - The current day's trending stocks automatically display on screen.
 - Enter a ticker symbol and select Search to search for individual stocks to invest in.
 - Select Logout to log out of the application.
+
 ## License
 - MIT
+
 # Financial-Freedom
 basic API app and budget tracker using FireBaseAuth-Hooks
+
 ##Dependencies
 - Chart.js
 - Dotenv
 - useFireBaseAuth
+
 ## Contributors
 - no
+
 ## Test
 - run test
+
 ## Questions
 - Contact me:
 - GitHub:[Mark.Litfin](https://github.com/mlitfin123)
@@ -38,5 +50,3 @@ basic API app and budget tracker using FireBaseAuth-Hooks
 - Email:[Rudi.Danquah](https://github.com/rxd482)
 - Github:[RogerLamotheJR](https://github.com/RogerLamotheJR)
 - Email:[Roger.Lamothe.Jr@gmail.com](https://github.com/RogerLamotheJR)
-
-
