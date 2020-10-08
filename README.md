@@ -4,7 +4,7 @@ Basic API app and budget tracker using FireBaseAuth-Hooks.
 ## Link to the live application
 https://financialfreedombudget.herokuapp.com/
 
-<img src=financial_freedom1 height="300">
+<img src=financial_freedom1.PNG height="300">
 
 ## Description
 - Is creating a financial plan that helps you see the big picture and set long and short-term life goals.
@@ -33,8 +33,8 @@ https://financialfreedombudget.herokuapp.com/
 - Enter a ticker symbol and select Search to search for individual stocks to invest in.
 - Select Logout to log out of the application.
 
-<img src=financial_freedom2 height="300">
-<img src=financial_freedom3 height="300">
+<img src=financial_freedom2.PNG height="300">
+<img src=financial_freedom3.PNG height="300">
 
 ## License
 - MIT
