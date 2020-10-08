@@ -26,12 +26,12 @@ https://financialfreedombudget.herokuapp.com/
 ## Usage 
 - Log in using the google login method.
 - At the Dashboard, select Adjust your Budget to navigate to the BudGet window.
-<img src=financial_freedom3.PNG height="200">
+<img src=financial_freedom3.PNG height="250">
 - Enter the name of a new transaction and a positive or negative amount and select add transaction to add the new transaction to your budget.
 - View the total budget leftover at the top of the screen or in the bar graph.
 - Navigate back to the Dashboard and select View Potential Investments.
 - The current day's trending stocks automatically display on screen.
-<img src=financial_freedom2.PNG height="200">
+<img src=financial_freedom2.PNG height="250">
 - Enter a ticker symbol and select Search to search for individual stocks to invest in.
 - Select Logout to log out of the application.
 
