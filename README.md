@@ -31,7 +31,7 @@ https://financialfreedombudget.herokuapp.com/
 - View the total budget leftover at the top of the screen or in the bar graph.
 - Navigate back to the Dashboard and select View Potential Investments.
 - The current day's trending stocks automatically display on screen.
-<img src=financial_freedom2.PNG height="300">
+<img src=financial_freedom2.PNG height="200">
 - Enter a ticker symbol and select Search to search for individual stocks to invest in.
 - Select Logout to log out of the application.
 
